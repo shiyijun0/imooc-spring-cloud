@@ -27,7 +27,7 @@ public class WeatherReportController {
 	
 	@GetMapping("/cityId/{cityId}")
 	public ModelAndView getReportByCityId(@PathVariable("cityId") String cityId, Model model) throws Exception {
-		model.addAttribute("title", "老卫的天气预报");
+		model.addAttribute("title", "以军的天气预报");
 		model.addAttribute("cityId", cityId);
 		model.addAttribute("cityList", cityDataService.listCity());
 		model.addAttribute("report", weatherReportService.getDataByCityId(cityId));

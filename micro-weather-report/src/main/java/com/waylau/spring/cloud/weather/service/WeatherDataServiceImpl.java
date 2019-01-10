@@ -19,7 +19,8 @@ import com.waylau.spring.cloud.weather.vo.WeatherResponse;
  * WeatherDataService 实现.
  * 
  * @since 1.0.0 2017年11月22日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://waylau.com">Way Lau</a>
+ * 中国天气网：城市名称：http://mobile.weather.com.cn/js/citylist.xml
  */
 @Service
 public class WeatherDataServiceImpl implements WeatherDataService {

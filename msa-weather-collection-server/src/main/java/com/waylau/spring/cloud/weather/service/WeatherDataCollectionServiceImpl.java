@@ -43,6 +43,7 @@ public class WeatherDataCollectionServiceImpl implements WeatherDataCollectionSe
 		ValueOperations<String, String>  ops = stringRedisTemplate.opsForValue();
 
 		// 调用服务接口来获取
+		//restTemplate.ge
  		ResponseEntity<String> respString = restTemplate.getForEntity(uri, String.class);
 
  		if (respString.getStatusCodeValue() == 200) {
