@@ -56,7 +56,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 
 	// Quartz
-	compile('org.springframework.boot:spring-boot-starter-quartz')
+	//compile('org.springframework.boot:spring-boot-starter-quartz')
+	// https://mvnrepository.com/artifact/org.quartz-scheduler/quartz
+	//compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.2.0'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-quartz
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-quartz', version: '2.1.0.RELEASE'
+
 
 	// ∏√“¿¿µ”√”⁄≤‚ ‘Ω◊∂Œ
 	testCompile('org.springframework.boot:spring-boot-starter-test')

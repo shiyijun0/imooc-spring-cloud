@@ -96,12 +96,14 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 		ValueOperations<String, String>  ops = stringRedisTemplate.opsForValue();
 
 		// 调用服务接口来获取
+		System.out.println("*************"+uri);
  		ResponseEntity<String> respString = restTemplate.getForEntity(uri, String.class);
+		//ResponseEntity<String> respString = restTemplate.getForEntity("http://127.0.0.1:8000/hello", String.class);
 
  		if (respString.getStatusCodeValue() == 200) {
 			strBody = respString.getBody();
 		}
-		
+	//	ops.set(System.currentTimeMillis()+"","缓存"+System.currentTimeMillis());
 		// 数据写入缓存
 		ops.set(key, strBody, TIME_OUT, TimeUnit.SECONDS);
 

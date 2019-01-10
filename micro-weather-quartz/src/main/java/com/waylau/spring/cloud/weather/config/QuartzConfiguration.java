@@ -31,9 +31,9 @@ public class QuartzConfiguration {
 	// Trigger
 	@Bean
 	public Trigger weatherDataSyncTrigger() {
-		
+		//几秒钟触发函数
 		SimpleScheduleBuilder schedBuilder = SimpleScheduleBuilder.simpleSchedule()
-				.withIntervalInSeconds(TIME).repeatForever();
+				.withIntervalInSeconds(3).repeatForever();
 		
 		return TriggerBuilder.newTrigger().forJob(weatherDataSyncJobDetail())
 				.withIdentity("weatherDataSyncTrigger").withSchedule(schedBuilder).build();
