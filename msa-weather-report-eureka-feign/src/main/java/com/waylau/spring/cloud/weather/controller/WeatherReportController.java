@@ -16,6 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.waylau.spring.cloud.weather.service.CityClient;
 import com.waylau.spring.cloud.weather.service.WeatherReportService;
 import com.waylau.spring.cloud.weather.vo.City;
+
+import javax.inject.Inject;
+
 /**
  * Weather Report Controller.
  * 

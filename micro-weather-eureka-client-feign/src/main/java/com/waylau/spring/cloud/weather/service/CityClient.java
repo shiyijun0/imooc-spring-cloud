@@ -1,6 +1,7 @@
 package com.waylau.spring.cloud.weather.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
 @FeignClient("msa-weather-city-eureka")
+@Component
 public interface CityClient {
 
 	@GetMapping("/cities")
