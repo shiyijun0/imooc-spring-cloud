@@ -16,8 +16,10 @@ public class ApplicationTests {
 	private String auther;
 	
 	@Test
-	public void contextLoads() {
-		assertEquals("waylau.com", auther);
+	public void contextLoads()
+	{
+		System.out.println("******"+auther);
+		assertEquals("localhost", auther);
 	}
 
 }
