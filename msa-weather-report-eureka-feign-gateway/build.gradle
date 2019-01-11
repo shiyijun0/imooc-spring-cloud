@@ -4,6 +4,7 @@ buildscript {
 	// ext 用于定义动态属性
 	ext {
 		springBootVersion = '2.0.0.M3'
+		//springBootVersion = '1.5.9.RELEASE'
 	}
 
 	// 使用了Maven的中央仓库及Spring自己的仓库（也可以指定其他仓库）
@@ -24,7 +25,8 @@ buildscript {
 
 // 使用插件
 apply plugin: 'java'
-apply plugin: 'eclipse'
+//apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -44,7 +46,8 @@ repositories {
 }
 
 ext {
-	springCloudVersion = 'Finchley.M2'
+	//springCloudVersion = 'Finchley.M2'
+	springCloudVersion = 'Finchley.M9'
 }
 
 // 依赖关系
@@ -61,13 +64,18 @@ dependencies {
 
 	// Feign
 	compile('org.springframework.cloud:spring-cloud-starter-openfeign')
-
+	//compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.0.1.RELEASE'
+//	compile('org.springframework.cloud:spring-cloud-starter-feign')
+	//compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+	//compile('org.springframework.cloud:spring-cloud-context')
+	//1.4.4.RELEASE
 	// 该依赖用于测试阶段
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
 	imports {
+		//mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR4"
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
